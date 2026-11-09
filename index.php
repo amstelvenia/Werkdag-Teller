@@ -13,6 +13,12 @@
 <body>
 <strong><?= number_format($totaalUren, 2, ',', '.') ?> uur</strong><br>
 <a href="add.php" class="add">Voeg werkdag toe</a>
+<form action="handeling/delete-all.php" method="POST"
+      onsubmit="return confirm('Weet je zeker dat je ALLE werkdagen wilt verwijderen? Dit kan niet ongedaan worden gemaakt.');">
+    <button type="submit" name="delete_all">
+        Verwijder alle data
+    </button>
+</form>
 <table border="1">
     <tr>
         <th>Dag</th>
