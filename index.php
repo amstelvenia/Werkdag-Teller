@@ -22,9 +22,16 @@
         <th>Eindtijd</th>
         <th>Pauze</th>
         <th></th>
+        <th></th>
     </tr>
 
     <?php foreach ($dagen as $dag): ?>
+
+        <?php
+            $update = "edit.php?id=" . $dag['id'] . "&dag=" . $dag['dag'] . "&week=" . $dag['week'] . "&maand=" . 
+            $dag['maand'] . "&begintijd=" . $dag['begintijd'] . "&eindtijd=" . $dag['eindtijd'] . 
+            "&pauze=" . $dag['pauze'];
+        ?>
         <tr>
             <td><?= htmlspecialchars($dag['dag']) ?></td>
             <td><?= htmlspecialchars($dag['week']) ?></td>
@@ -32,8 +39,13 @@
             <td><?= htmlspecialchars($dag['begintijd']) ?></td>
             <td><?= htmlspecialchars($dag['eindtijd']) ?></td>
             <td><?= htmlspecialchars($dag['pauze']) ?> min</td>
-            <td><a class="delete" style="text-decoration: none;" href="
-            <?php echo "handeling/delete.php?id=" . $dag['id']; ?>">verwijder</a></td>
+            <td>
+                <a class="delete" style="text-decoration: none;" href="
+                <?php echo "handeling/delete.php?id=" . $dag['id']; ?>">verwijder</a>
+            </td>
+            <td>
+                <a class="update" style="text-decoration: none;" href="<?= $update ?>">update</a>
+            </td>
         </tr>
 
     <?php endforeach; ?>
