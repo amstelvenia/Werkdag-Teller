@@ -21,6 +21,7 @@
         <th>Begintijd</th>
         <th>Eindtijd</th>
         <th>Pauze</th>
+        <th></th>
     </tr>
 
     <?php foreach ($dagen as $dag): ?>
@@ -31,6 +32,8 @@
             <td><?= htmlspecialchars($dag['begintijd']) ?></td>
             <td><?= htmlspecialchars($dag['eindtijd']) ?></td>
             <td><?= htmlspecialchars($dag['pauze']) ?> min</td>
+            <td><a class="delete" style="text-decoration: none;" href="
+            <?php echo "handeling/delete.php?id=" . $dag['id']; ?>">verwijder</a></td>
         </tr>
 
     <?php endforeach; ?>
