@@ -11,7 +11,8 @@
     <title>Werkdag Teller</title>
 </head>
 <body>
-<strong><?= number_format($totaalUren, 2, ',', '.') ?> uur</strong>
+<strong><?= number_format($totaalUren, 2, ',', '.') ?> uur</strong><br>
+<a href="add.php" class="add">Voeg werkdag toe</a>
 <table border="1">
     <tr>
         <th>Dag</th>

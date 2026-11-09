@@ -6,9 +6,9 @@
         begintijd TIME NOT NULL,
         eindtijd TIME NOT NULL,
         pauze INTEGER NOT NULL,
-        dag TEXT NOT NULL,
-        week TEXT NOT NULL,
-        maand TEXT NOT NULL,
+        dag TEXT,
+        week TEXT,
+        maand TEXT,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
     
