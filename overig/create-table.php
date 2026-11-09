@@ -1,5 +1,5 @@
 <?php 
-    include 'database-connectie.php'; 
+    include(__DIR__ . '/database-connectie.php');
     
     $sql = "CREATE TABLE IF NOT EXISTS werkdag (
         id INTEGER PRIMARY KEY AUTOINCREMENT,

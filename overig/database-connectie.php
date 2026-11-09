@@ -1,6 +1,6 @@
 <?php
     try {
-        $conn = new PDO("sqlite:werkdag.sqlite");
+        $conn = new PDO('sqlite:' . __DIR__ . '/werkdag.sqlite');
 
         $conn->setAttribute(
             PDO::ATTR_ERRMODE,

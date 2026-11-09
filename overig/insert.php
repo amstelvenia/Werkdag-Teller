@@ -1,6 +1,6 @@
 <?php
 
-include 'database-connectie.php'; 
+include(__DIR__ . '/database-connectie.php');
 
 $stmt = $conn->prepare(
     "INSERT INTO werkdag (begintijd, eindtijd, pauze, dag, week, maand) 
@@ -8,10 +8,10 @@ $stmt = $conn->prepare(
 );
 
 $stmt->execute([
-    ':begintijd' => '09:30:00',
-    ':eindtijd' => '10:23:00',
+    ':begintijd' => '17:00:00',
+    ':eindtijd' => '21:30:00',
     ':pauze' => 15,
-    ':dag' => 'dag 1',
+    ':dag' => 'dag 2',
     ':week' => 'week 1',
-    ':maand' => '2026-11-08',
+    ':maand' => '2026-11-09',
 ]);
